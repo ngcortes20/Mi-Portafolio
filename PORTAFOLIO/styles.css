@@ -1,0 +1,262 @@
+/* Elimina el desbordamiento en la pantalla */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: "Fahkwang", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: black;
+}
+
+p, h3, a {
+    font-family: "Englebert", cursive;
+    font-weight: 200;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    background: #dfdad7;
+    border-radius: 100px;
+    padding: 20px;
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    position: fixed;
+    top: 30;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+#portada {
+    background: #c2b19c;
+    padding: 8% 8% 3% 8%;
+    display: flex;
+    gap: 10%;
+}
+
+.barra-1 img{
+    border: 2px solid black;
+    padding: 15px;
+    margin-left: 20%;
+    width: 370px;
+}
+
+.barra-2 h1 {
+    padding-left: 150px;
+    margin-top: 20%;
+}
+
+.barra-2 p {
+    padding-left: 150px;
+}
+
+.barra-2 img {
+    border: 2px solid  black;
+    padding: 15px;
+    width: 400px;
+    height: 300px;
+    margin-left: 70%;
+}
+
+#sobre-mi {
+    background: #d4c1d4;
+    padding: 13% 0 2% 0;
+    display: flex;
+    gap: 10%;
+}
+
+.perfil {
+    margin-left: 10%;
+    text-align: center;
+}
+
+.perfil img {
+    height: 350px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+.descripcion {
+    border-right: 2px solid black;
+    padding-right: 200px;
+    width: 50%;
+}
+
+#portafolio {
+    background: #bec6c3;
+    padding: 9% 0 5% 0;
+}
+.proyectos {
+    display: flex;
+    justify-content: space-around;
+}
+.proyecto {
+    width: 350px;
+    text-align: center;
+}
+.proyecto img {
+    width: 100%;
+    height: auto;
+    background-color: #cad0cf;
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.proyecto h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.dos-lineas {
+    display: flex;
+    margin-left: 16%;
+}
+.dos-lineas h1 {
+    padding-right: 10%;
+}
+
+#habilidades {
+    background: #c2b19c;
+    padding: 8% 0 7% 0;
+    display: flex;
+    gap: 12%;
+    justify-content: center;
+}
+.texto {
+    padding-top: 14%;
+}
+.programas {
+    display: inline-block;
+}
+.programa-1 {
+    display: flex;
+    gap: 3%;
+    height: 200px;
+}
+.programa-2 {
+    display: flex; 
+    gap: 12%;
+    height: 150px;
+    margin-top: 80px; 
+}
+.programa-3 {
+    display: flex; 
+    gap: 15%;
+    height: 200px;
+    margin-top: 80px;
+}
+
+#contacto {
+    background: #d4c1d4;
+    padding: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-container {
+    padding: 5%;
+    text-align: center;
+}
+
+.redes {
+    display: flex;
+    list-style: none;
+    padding: 50px 0;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+.redes .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+.redes .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    background: #fff;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  
+  .redes .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .redes .icon:hover .tooltip {
+    top: -55px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+.redes .icon:hover span,
+.redes .icon:hover .tooltip {
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.redes .linkedin:hover,
+.redes .linkedin:hover .tooltip,
+.redes .linkedin:hover .tooltip::before {
+    background: #2b7cbe;
+    color: #fff;
+  }
+
+  .redes .pinterest:hover,
+  .redes .pinterest:hover .tooltip,
+  .redes .pinterest:hover .tooltip::before {
+    background: #bd0230;
+    color: #fff;
+  }
+
+.redes .telegram:hover,
+.redes .telegram:hover .tooltip,
+.redes .telegram:hover .tooltip::before {
+    background: #46c2f3;
+    color: #fff;
+}
+
+.redes .github:hover,
+.redes .github:hover .tooltip,
+.redes .github:hover .tooltip::before {
+    background: #212d3276;
+    color: #fff;
+}
+
